@@ -1,0 +1,151 @@
+/* -- „Table of Contents” -- 
+* Variables
+* Layout
+* Settings
+* Elements
+* The base of every button 
+* Additional styles for "Default"
+* biger than mobil
+*/
+
+/* -- Variables --*/
+:root {
+  --div-recipe:       limegreen;
+}
+
+/* -- Layout-- */
+.container {
+  display:            grid;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap:                5px;
+}
+
+
+/* -- Settings -- */
+.item {
+  padding:           1rem;
+  text-align:        center;
+}
+.item img {
+  width:             90%;
+  margin:            1rem;
+}
+.item img:hover {
+  transform:         scale(1.08); 
+  transition:        .15s ease-in-out;
+}
+.item em {
+  color:             red;
+}
+
+
+/* -- Elements -- */
+header {
+  background-color: limegreen;
+  font-size:        30px;
+}
+nav {
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  background-color: gray;
+  font-size:        30px;
+}
+main {
+  background-color: lightblue;
+  font-size:        1rem;
+}
+aside {
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  background-color: gray;
+  font-size:        30px;
+}
+.recipe {
+  weidth:           90%;
+  font-size:        15px;
+  border:           2px solid white;
+  padding:          .5rem;
+  margin-bottom:    .8rem;
+  background-color: var(--div-recipe);
+  color:            black;
+}
+footer {
+  background-color: black;
+  font-size:        15px;
+  color:            white;
+}
+a {
+  color:            lightblue;
+}
+
+/* The base of every button */
+.btn {
+  display:          inline-block;
+  width:            80%;
+  text-decoration:  none;
+  font-family:      Arial, sans-serif;
+  text-align:       center;
+  font-size:        1rem;
+  line-height:      1.42857143;
+  padding:          .5rem 1rem;
+  margin-bottom:    .8rem;
+  border:           1px solid transparent;
+  border-radius:    4px;
+  white-space:      nowrap;
+  vertical-align:   middle;
+}
+/* Additional styles for "Default" */
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color:     #ccc;
+}
+
+.btn-default:hover {
+  background-color: #e6e6e6;
+  border-color:     #adadad;
+  transition:       background-color .15s ease-in-out;
+}
+  
+
+/* biger than mobil */
+
+@media (min-width: 480px){
+  .container {
+  display:               grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows:    auto 1fr auto;
+  gap:                   5px;
+  height:                100vh;  
+  }
+  header {
+    background-color:    limegreen;
+    grid-column:         1 / 4 ;
+    grid-row:            1 / 2;
+}
+nav {
+  background-color:      gray;
+  grid-column:           1 / 2;
+  grid-row:              2 / 3;
+ 
+}
+main {
+  background-color:      lightblue;
+  font-size:             1rem;
+  grid-column:           2 / 3;
+  grid-row:              2 / 3;
+}
+aside {
+  background-color:      gray;
+    grid-column:         3 / 4;
+    grid-row:            2 / 3;
+}
+footer {
+  background-color:      black;
+  color:                 white;
+  grid-column:           1/ 4;
+  grid-row:              3 / 4;
+}
+}
